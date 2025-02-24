@@ -1,118 +1,49 @@
 # React Component Library with Storybook
 
-This project is a collection of reusable UI components built with React, Styled Components, and Storybook. The library allows you to explore, test, and showcase your components in an interactive and isolated environment.
+This project is a collection of reusable UI components built using React, TypeScript, Styled Components, and Storybook. It provides an interactive UI showcase for exploring and testing components in an isolated environment.
 
 ## Project Overview
+
 - Built with React and TypeScript
 - Styled using Styled Components
 - Interactive UI showcase with Storybook
-- Fully responsive and customizable components
-- Containerized using Docker for easy deployment
-
----
+- Fully responsive components
+- Runs inside a Docker container
 
 ## Getting Started
 
 ### 1. Clone the Repository
-Clone this repository and navigate to the project directory:
-```sh
-git clone https://github.com/yourusername/yash_yash_ui-garden.git
+
+git clone https://github.com/yyash-520/yash_yash_ui-garden.git
 cd yash_yash_ui-garden
-2. Install Dependencies
-Make sure you have Node.js installed (version 14 or later recommended). Then run the following command to install the project dependencies:
+### 2. Install Dependencies
+Ensure that Node.js (version 16 or later recommended) is installed. Then run:
 
-sh
-Copy
-Edit
 npm install
-3. Start Storybook
-To start Storybook and view the components in an interactive UI, run:
-
-sh
-Copy
-Edit
+### 3. Start Storybook
+To view components in an interactive UI, run:
 npm run storybook
-Storybook will be available at http://localhost:6006/.
+Storybook will open on http://localhost:6006/.
 
-4. Run the Component Library
-To start the main React app, run:
-
-sh
-Copy
-Edit
+### 4. Run the Component Library
+To start the main React app, use:
 npm start
-5. Run Tests
-Each component in this library has at least two tests. To run the tests, use:
-
-sh
-Copy
-Edit
+### 5. Run Tests
+Each component has at least two tests. Run them with:
 npm test
 Running with Docker
-This project is containerized for easier deployment and consistent environments.
+This project is containerized for easy deployment.
 
-1. Build the Docker Image
-Run the following command to build the Docker image:
+### Build the Docker Image
+docker build -t yash_yash_coding_assignment-12 .
+### Run the Container
+docker run -p 8083:83 yash_yash_coding_assignment-12
+### Open the App
+Go to http://localhost:8083/ in your browser.
 
-sh
-Copy
-Edit
-docker build -t yash_yash_ui-garden .
-2. Run the Container
-Once the image is built, run the container with:
-
-sh
-Copy
-Edit
-docker run -p 8083:80 yash_yash_ui-garden
-3. Open the App
-After running the container, open your browser and navigate to http://localhost:8083/ to view the application.
-
-Project Structure
-mathematica
-Copy
-Edit
-yash_yash_ui-garden/
-├── src/
-│   ├── components/
-│   │   ├── Button/
-│   │   │   ├── Button.tsx
-│   │   │   ├── Button.stories.tsx
-│   │   │   └── Button.styles.ts
-│   │   ├── Label/
-│   │   │   ├── Label.tsx
-│   │   │   ├── Label.stories.tsx
-│   │   │   └── Label.styles.ts
-│   │   ├── Text/
-│   │   │   ├── Text.tsx
-│   │   │   ├── Text.stories.tsx
-│   │   │   └── Text.styles.ts
-│   │   ├── Table/
-│   │   │   ├── Table.tsx
-│   │   │   ├── Table.stories.tsx
-│   │   │   └── Table.styles.ts
-│   │   ├── Dropdown/
-│   │   │   ├── Dropdown.tsx
-│   │   │   ├── Dropdown.stories.tsx
-│   │   │   └── Dropdown.styles.ts
-│   │   ├── RadioButton/
-│   │   │   ├── RadioButton.tsx
-│   │   │   ├── RadioButton.stories.tsx
-│   │   │   └── RadioButton.styles.ts
-│   │   └── index.ts
-│   ├── App.tsx
-│   ├── index.tsx
-│   └── styles/
-├── .dockerignore
-├── .gitignore
-├── Dockerfile
-├── package.json
-├── README.md
-└── tsconfig.json
-Component Descriptions
-Button: A reusable and customizable button component with various styles and sizes.
-Label: A simple label component for displaying text.
-Text: A component that allows you to customize and display different text styles.
-Table: A reusable table component for displaying tabular data.
-Dropdown: A customizable dropdown component for selecting options.
-RadioButton: A simple radio button component for selecting one option from a group.
+Technologies Used
+React for building the components
+TypeScript for static type checking
+Styled Components for CSS-in-JS styling
+Storybook for interactive documentation
+Jest and React Testing Library for testing
